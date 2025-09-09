@@ -1,0 +1,14 @@
+title: Pantry
+path: pantry
+cards:
+  - type: entity-filter
+    state_filter: ["on"]
+    entities: []
+    card:
+      type: entities
+      title: Low stock
+  - type: entities
+    title: Summary
+    entities:
+      - sensor.pantry_total_items
+      - sensor.pantry_low_stock_count
