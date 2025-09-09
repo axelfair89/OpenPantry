@@ -1,0 +1,1 @@
+{ "config": { "step": { "user": { "title": "OpenPantry", "description": "Create your pantry.", "data": { "name": "Name" } } }, "abort": { "already_configured": "Already configured." } } }

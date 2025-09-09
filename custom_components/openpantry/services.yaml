@@ -1,0 +1,34 @@
+add_item:
+  name: Add item
+  fields:
+    name: { required: true, example: "Toilet Paper 48-pack" }
+    unit: { required: true, example: "roll" }
+    par: { required: false, example: 12 }
+    location: { required: false }
+    category: { required: false }
+    barcode: { required: false }
+
+consume:
+  name: Consume
+  fields:
+    item_id: { required: true }
+    amount: { required: true, example: 1.0 }
+
+restock:
+  name: Restock
+  fields:
+    item_id: { required: true }
+    amount: { required: true, example: 6.0 }
+    expiries: { required: false, example: ["2026-01-01"] }
+
+set_par:
+  name: Set par
+  fields:
+    item_id: { required: true }
+    par: { required: true, example: 10 }
+
+link_shopping_list:
+  name: Link Shopping List
+  fields:
+    item_id: { required: true }
+    enable: { required: true, example: true }

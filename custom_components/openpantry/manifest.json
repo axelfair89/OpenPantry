@@ -1,0 +1,12 @@
+{
+  "domain": "openpantry",
+  "name": "OpenPantry",
+  "version": "0.1.0",
+  "integration_type": "hub",
+  "iot_class": "local_polling",
+  "codeowners": ["@YOUR_GITHUB_HANDLE"],
+  "issue_tracker": "https://github.com/YOUR_GITHUB_HANDLE/openpantry/issues",
+  "requirements": [],
+  "config_flow": true,
+  "after_dependencies": ["shopping_list"]
+}

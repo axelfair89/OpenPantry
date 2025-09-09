@@ -1,0 +1,19 @@
+blueprint:
+  name: Pantry - Low stock → Notify & add to Shopping List
+  domain: automation
+  input:
+    notify_device: { name: Mobile device, selector: { device: {} } }
+trigger:
+  - platform: event
+    event_type: openpantry_item_low
+variables:
+  item_id: "{{ trigger.event.data.id }}"
+action:
+  - service: persistent_notification.create
+    data:
+      title: "Pantry low stock"
+      message: "{{ item_id }} is below par."
+  - service: shopping_list.add_item
+    data:
+      name: "{{ item_id | replace('_',' ') }}"
+mode: restart
